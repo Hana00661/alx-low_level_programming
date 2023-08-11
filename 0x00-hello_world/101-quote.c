@@ -1,4 +1,5 @@
-#include<unistd>
+#include <stdio.h>
+#include <unistd.h>
 /**
  *main - Ertry point
  *Description: print a qoute using write function
