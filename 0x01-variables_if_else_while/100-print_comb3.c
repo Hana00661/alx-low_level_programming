@@ -2,7 +2,6 @@
 /**
  *main - Ertry point
  *Description: print all possible different
-		combination of two digits
  *Return: Alawys 0 (Success)
 */
 int main(void)
