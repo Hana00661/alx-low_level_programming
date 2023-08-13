@@ -1,13 +1,12 @@
-#include <stdio.h>
 #include <unistd.h>
 /**
- * main - A c program that prints a line to the standard error
+ *main - A c program that prints a line to the standard error
  *Return: 1 (Seccess)
 */
 int main(void)
 {
-fput("and that piece of art is useful\" - Dora orpar, 2015-10-19\n", stdout);
+	char quo[] = "and that piece of art is useful\" - Dora orpar, 2015-10-19\n";
 
-	return (1);
-
+	write(1, quo, 59);
+return (1);
 }
