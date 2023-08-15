@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	char srt[] = "_putchar);
+	char str[] = "_putchar";
 
 	int cha;
 	for (cha = 0; cha < 8; cha++)
