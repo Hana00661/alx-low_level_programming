@@ -1,0 +1,16 @@
+#include "main.h"
+/**
+ *main - Ertry point
+ *print_alphabet -  utilizes on the _putchar function to print
+ *			the alphabet a to z
+*/
+void print_alphabet(void)
+{
+	int cha;
+
+	for (cha = 'a'; cha <= 'z'; cha++)
+
+		_putchar(cha);
+
+	_putchar('\n');
+}
