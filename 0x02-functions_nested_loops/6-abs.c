@@ -4,7 +4,8 @@
  * _abs - function that get the absolute value
  *
  * @n: takes the number type is integer
- * Rrturn: Return: Alawys 0 (Success)
+ *
+ * Return: Alawys 0 (Success)
 */
 
 int _abs(int n)
