@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _abs - function that computes the absolute
- *		value of an integer
+ * _abs - function that get the absolute value
  *
  * @n: takes the number type is integer
- *Rrturn: Return: Alawys 0 (Success)
+ * Rrturn: Return: Alawys 0 (Success)
 */
+
 int _abs(int n)
 {
 	if (n < 0)
