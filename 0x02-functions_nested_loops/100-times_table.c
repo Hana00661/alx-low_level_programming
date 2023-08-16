@@ -4,7 +4,7 @@
  * print_time_table - print time table of n
  *
  * @n: takes number input
-*/
+ */
 
 void print_times_table(int n)
 {
@@ -15,7 +15,7 @@ void print_times_table(int n)
 		for (num = 0; num <= n; ++num)
 		{
 			_putchar(48);
-			for (mult = 0; mult <= n; ++mult)
+			for (mult = 1; mult <= n; ++mult)
 			{
 				_putchar(',');
 				_putchar(' ');
