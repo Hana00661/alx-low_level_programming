@@ -2,23 +2,20 @@
 
 /**
  * time_table - print the 9 times table
- * Example table
- * 0, 0, 0, 0, ..
- * 0, 1, 2, 3, ..
 */
 
 void times_table(void)
 {
-	int num, nulm, prod;
+	int num, mult, prod;
 
 	for (num = 0; num <= 9; num++)
 	{
 		_putchar(48);
-		for (nulm = 0; nulm <= 9; nulm++)
+		for (mult = 1; mult <= 9; mult++)
 		{
 			_putchar(',');
 			_putchar(' ');
-			prod = num + nulm;
+			prod = num * mult;
 
 			/*
 			* put space if product is a single number
