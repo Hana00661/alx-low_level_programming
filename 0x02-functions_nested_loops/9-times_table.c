@@ -1,7 +1,10 @@
 #include"main.h"
 
 /**
- * time_table - print the 9 times table
+ *Description: Function Time_table print the 9 times table
+ *
+ *Return: Alawys 0 (Success)
+ *
 */
 
 void times_table(void)
