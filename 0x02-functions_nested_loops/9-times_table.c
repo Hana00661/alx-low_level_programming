@@ -1,9 +1,9 @@
 #include"main.h"
 
 /**
- *Description: Function Time_table print the 9 times table
+ * Description: function times_table print the 9 times table
  *
- *Return: Alawys 0 (Success)
+ * Return: Alawys 0 (Success)
  *
 */
 
