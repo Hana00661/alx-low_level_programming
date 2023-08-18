@@ -4,12 +4,12 @@
  * print_diagonal - print a diagonal line
  *
  * @n: is the number of times the \ charactor
- * 	should be printed 
+ *	should be printed
 */
 
 void print_diagonal(int n)
 {
-	int pos,spa;
+	int pos, spa;
 
 	if (n <= 0)
 		_putchar('\n');
