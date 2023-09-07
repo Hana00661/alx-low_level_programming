@@ -13,5 +13,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void _puts(char *str);
 int _atio(const char *S);
 void print_int(unsigned long int n);
-
+char *_memset(char *S, char b, unsigned int n);
 #endif /*MAIN_H */
