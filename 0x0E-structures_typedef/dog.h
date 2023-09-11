@@ -3,18 +3,18 @@
 
 /**
  * struct dog - dog struct
- * @name : char
- * @age : float
- * @owner : char
+ * @name : dog's name
+ * @age : dog's age
+ * @owner : owner's name
  *
- * Description: alone struct dog
+ * Description: alone dog struct
  */
 
 struct dog
 {
 	char *name;
 	float age;
-	char *onwer;
+	char *owner;
 };
 
 #endif
