@@ -2,14 +2,15 @@
 """
 5-island_perimeter
 """
-def island_perimeter (grid):
+
+
+def island_perimeter(grid):
     """Function that calculate an island described in a grid perimeter"""
 
     width = len(grid[0])
     height = len(grid)
     edges = 0
     size = 0
-
     for i in range(height):
         for j in range(width):
             if grid[i][j] == 1:
