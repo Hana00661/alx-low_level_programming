@@ -1,61 +1,63 @@
 #include "search_algos.h"
 
+int _recursion(int *array, int value, size_t left, size_t right);
+
 /**
- * print_array - prints the searching arrray
- * @array: the array to be printed
- * @i: first index
- * @j: last index
+ * _recursion - helper to advanced_binary, recursively searches
+ * for a value in an integer array
+ * @array: pointer to first element of array to seach
+ * @value: value to search for
+ * @left: starting index in array
+ * @right: ending index in array
+ *
+ * Return: index containing `value`, or -1 if `value` not found or
+ * `array` is NULL
  */
-
-void print_array(int *array, size_t i, size_t j)
+int _recursion(int *array, int value, size_t left, size_t right)
 {
-	size_t c;
+	size_t mid, i;
 
-	printf("Searching in array:");
-	for (c = i; c <= j; c++)
+	if (!array)
+		return (-1);
+
+	mid = (left + right) / 2;
+	printf("Searching in array: ");
+	for (i = left; i <= right; i++)
+		printf("%i%s", array[i], i == right ? "\n" : ", ");
+
+	if (array[left] == value)
+		return ((int)left);
+
+	if (array[left] != array[right])
 	{
-		if (c == i)
-			printf(" %d", array[c]);
-		else
-			printf(", %d", array[c]);
+		if (array[mid] < value)
+			return (_recursion(array, value,
+							mid + 1, right));
+		if (array[mid] >= value)
+			return (_recursion(array, value,
+							left, mid));
 	}
-	printf("\n");
+
+	return (-1);
 }
 
 /**
- * advanced_binary - advanced binary search algorithm
- * @array: array to be searched
- * @size: size of the array
- * @value: value to search for
- * Return: index of value if found
+ * advanced_binary - searches for a value in a sorted array of integers
+ * using a binary search algorithm.
+ * @array: pointer to first element of array to search
+ * @size: number of elements in array
+ * @value: value to search
+ * Return: first index containing value, or -1 if value not found or
+ * array is NULL
  */
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t i = 0, j = size - 1, c;
-	int rec;
+	size_t left = 0;
+	size_t right = size - 1;
 
 	if (!array)
 		return (-1);
-	print_array(array, i, j);
-	c = (i + j) / 2;
-	if (i == j && array[i] == value)
-		return (i);
-	if (i == j && array[i] != value)
-		return (-1);
-	if (array[c] == value)
-	{
-		if (array[c - 1] < value)
-			return (c);
-		rec = advanced_binary(&array[i], c - i + 1, value);
-	}
-	else if (array[c] > value)
-	{
-			rec = advanced_binary(&array[i], c - i, value);
-	}
-	else
-	{
-			rec = advanced_binary(&array[c + 1], j - c, value);
-	}
-	return (rec);
+
+	return (_recursion(array, value, left, right));
 }
